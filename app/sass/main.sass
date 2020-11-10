@@ -1,0 +1,115 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+textarea:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+input:focus
+	&::-webkit-input-placeholder
+		color: transparent!important
+	&::-moz-placeholder
+		color: transparent!important
+	&::-ms-input-placeholder
+		color: transparent!important
+
+html
+	-ms-overflow-style: none
+	scrollbar-width: none
+	&::-webkit-scrollbar
+		width: 0
+	&::-webkit-scrollbar
+		width: 0
+
+
+html
+  overflow: scroll
+  overflow-x: hidden
+::-webkit-scrollbar
+  width: 0px
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+
+
+.btn
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 255px
+	height: 60px
+	background-color: $accent
+	border: 1px soilid $accent
+	border-radius: 30px
+	font-size: 18px
+	text-decoration: none
+	color: #fff
+	font-weight: bold
+	box-shadow: -3px 4px 65px 0px rgba(31, 39, 48, 0.19)
+	transition: .3s all ease
+	margin: 0 auto
+	cursor: pointer
+	&:hover
+		color: #fff
+		text-decoration: none
+		background-color: darken($accent, 10%)
+		box-shadow: -3px 4px 65px 0px rgba(31, 39, 48, 0.40)	
+	
+// Custom Sass / Remove before use
+.container
+	max-width: 700px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.example-grid
+	display: grid
+	grid-gap: $gutter
+	grid-template-columns: 1fr 1fr
+	grid-template-areas: "left right"
+	> div:first-child
+		grid-area: left
+	> div:last-child
+		grid-area: right
+	+media-breakpoint-down(xs)
+		display: block
+		> div
+			padding: $gutter/2 0
+	
+.example-img
+	width: 100%
+
+.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
