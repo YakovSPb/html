@@ -19,30 +19,677 @@
 
 <body>
 
-	<!-- Custom HTML / Remove before use -->
 
-	<div class="container">
-
-		<div class="parent"> <!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
-			<img class="lazy img-responsive example-img"
-			src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-			data-src="img/@1x/preview.jpg"
-			data-srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
-			alt="Start HTML5 Template">
+	<header class="header">
+		<div class="header_info">
+			<div class="container">
+				<div class="header_inner">
+					<a href="/" class="logo"><img src="img/logo.png" alt="alt"></a>
+					<div class="mobile_info">
+						<div class="mobile_info__geo"><img src="img/geo_white.svg" alt="alt"></div>
+						<div class="mobile_info__phone"><a href="tel:+77777777777"><img src="img/phone.svg" alt="alt"></a></div>
+						<div class="mobile_info__burger mobile_info__burger--active">
+							<img class="mobile_info__open" src="img/burger.svg" alt="alt">
+							<img class="mobile_info__close" src="img/close.svg" alt="alt">
+						</div>
+					</div>
+					<nav class="menu header__menu">
+						<ul class="menu__list">
+							<li class="menu-item"><a href="/news" >Услуги</a></li>
+							<li class="menu-item"><a href="/portfolio.html">Портфолио</a></li>
+							<li class="menu-item"><a href="/media">О нас</a></li>
+							<li class="menu-item"><a href="/media">Контакты</a></li>
+						</ul>
+					</nav>
+					<div class="search">
+						<form class="search_form" id="searchform"  method="get">
+							<input class="search_form__input" name="s" placeholder="Поиск" type="search">
+							<div class="search_form__btn"><img src="img/search.svg" alt="alt"></div>
+						</form>
+					</div>
+				</div>
+				<div class="header_loc">
+					<ul class="header_loc__list">
+						<li class="header_loc__item--close"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14.142" y="15.5566" width="20" height="2" transform="rotate(-135 14.142 15.5566)" fill="#4D63AA"/><rect x="-0.00012207" y="14.1426" width="20" height="2" transform="rotate(-45 -0.00012207 14.1426)" fill="#4D63AA"/></svg></li>
+						<li class="header_loc__item"><a class="header_loc__link" href="#">Москва</a></li>
+						<li class="header_loc__item"><a class="header_loc__link" href="#">Московская область</a></li>
+						<li class="header_loc__item"><a class="header_loc__link" href="#">Санкт-Петербург</a></li>
+						<li class="header_loc__item"><a class="header_loc__link" href="#">Ленинградская область</a></li>
+						<li class="header_loc__item"><a class="header_loc__link" href="#">Регионы РФ</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. <em>Ad distinctio animi</em>, dolorum eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia esse dolor repellat.</p>
-		<br>
-		<div class="example-grid">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti, nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-			<div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+		<div class="header_contacts">
+			<div class="container">
+				<div class="header_wrapper">
+					<div class="location">
+						<span class="location__link">
+							<img src="img/location.svg" alt="alt"><a class="navbar-link primer-header-region" data-toggle="popover" data-placement="bottom" data-title="Ваш регион Москва?">Санкт-Петербург</a></span>
+						</div>
+						<div class="phone header__phone">
+							<a href="#" class="phone_item">8 812 646 80 80</a>
+							<a href="#" class="phone_item">8 800 333 38 28</a>
+						</div>
+						<div class="email header__email">
+							<a href="mailto:info@6468080.ru" class="">info@6468080.ru</a>
+						</div>
+						<a data-fancybox data-src="#modal_form" class="btn" href="javascript:;">Бесплатная консультация</a>
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+
+		<nav class="menu mobile_menu">
+			<ul class="menu__list">
+				<li class="menu-item"><a href="/news" >Услуги</a></li>
+				<li class="menu-item"><a href="/portfolio.html">Портфолио</a></li>
+				<li class="menu-item"><a href="/media">О нас</a></li>
+				<li class="menu-item"><a href="/media">Контакты</a></li>
+			</ul>
+			<div class="mobile_inner">
+				<div class="moble_contact">
+					<div class="phone">
+						<a href="#" class="phone_item">8 812 646 80 80</a>
+					</div>	
+					<div class="email">
+							<a href="mailto:info@6468080.ru" class="">info@6468080.ru</a>
+						</div>		
+				</div>
+				<div class="mobile_btn">
+					<a data-fancybox="" data-src="#modal_form" class="btn" href="javascript:;">Бесплатная консультация</a>
+				</div>
+			</div>
+			<div class="search mobile_menu__search">
+						<form class="search_form" id="searchform2" method="get">
+							<input class="search_form__input" name="s" placeholder="Поиск" type="search">
+							<div class="search_form__btn"><img src="img/search.svg" alt="alt"></div>
+						</form>
+			</div>
+		</nav>
+
+		<div class="wrapper">
+			<div class="main">
+
+				<div class="promo">
+					<div class="promo__bg"><img src="img/promo_bg.jpg" alt="alt"></div>
+					<div class="promo_wrap">
+						<div class="container">
+							<div class="promo_inner">
+
+								<div class="promo_info">
+									<h1 class="h1 promo_info__h1">Остекление любой сложности</h1>
+									<div class="promo_info__desc">С 1999 года занимаемся проектированием, производством и строительно-монтажными работами. Нам доверяют не только частные лица, но и крупные федеральные компании. В нашем портфолио более 75000 проектов</div>
+
+									<div class="promo_seles">
+										<div class="promo_seles__header">
+											<div class="promo_seles__title">Акции</div>
+											<div class="slider_nav">
+												<div class="slider_nav__prev"><img src="img/arrow-prev.svg" alt="alt"></div>
+												<div class="slider_nav__next"><img src="img/arrow-prev.svg" alt="alt"></div>
+											</div>
+										</div>
+										<div class="promo_slider">
+											<div class="promo_slide">
+												<ul class="promo_slide__list">
+													<li>Москитная сетка в подарок</li>
+													<li>При заказе мансардного окна Rehau</li>
+													<li>При заказе мансардного окна Rehau</li>
+												</ul>
+											</div>
+											<div class="promo_slide">
+												<ul class="promo_slide__list">
+													<li>Москитная сетка в подарок</li>
+													<li>При заказе мансардного окна Rehau</li>
+													<li>При заказе мансардного окна Rehau</li>
+												</ul>
+											</div>
+											<div class="promo_slide">
+												<ul class="promo_slide__list">
+													<li>Москитная сетка в подарок</li>
+													<li>При заказе мансардного окна Rehau</li>
+													<li>При заказе мансардного окна Rehau</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="promo_services">
+									<div class="promo_services__title">Наши клиенты выбирают</div>
+									<div class="promo_list">
+										<div class="promo_item">
+											<a href="#" class="promo_item__link">
+												<div class="promo_item__img"><img src="img/promo_icon_01.png" alt="alt"></div>
+												<div class="promo_item__text">Замена холодного фасадного остекления на теплое</div>
+											</a>
+										</div>
+										<div class="promo_item">
+											<a href="#" class="promo_item__link">
+												<div class="promo_item__img"><img src="img/promo_icon_02.png" alt="alt"></div>
+												<div class="promo_item__text">Мансардные окна</div>
+											</a>
+										</div>
+										<div class="promo_item">
+											<a href="#" class="promo_item__link">
+												<div class="promo_item__img"><img src="img/promo_icon_03.png" alt="alt"></div>
+												<div class="promo_item__text">Гидроизоляция</div>
+											</a>
+										</div>
+										<div class="promo_item">
+											<a href="#" class="promo_item__link">
+												<div class="promo_item__img"><img src="img/promo_icon_04.png" alt="alt"></div>
+												<div class="promo_item__text">Замена больших стеклопакетов</div>
+											</a>
+										</div>
+										<div class="promo_item">
+											<a href="#" class="promo_item__link">
+												<div class="promo_item__img"><img src="img/promo_icon_05.png" alt="alt"></div>
+												<div class="promo_item__text">Тех. обслуживание коммерческих площадей</div>
+											</a>
+										</div>
+										<div class="promo_item">
+											<a href="#" class="promo_item__link">
+												<div class="promo_item__img"><img src="img/promo_icon_06.png" alt="alt"></div>
+												<div class="promo_item__text">Входные группы и алюминиевые двери</div>
+											</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>		
+					</div>
+
+				</div>
+
+				<div class="sect sect_services">
+					<div class="container">
+						<h2 class="h2 sect_h2">Наши услуги</h2>	
+						<div class="services_list">
+
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_01.png" alt="alt"></span>
+									<span class="service_item__text">
+										<p>Мансардные окна Зенитные фонари</p>
+										<p>Люки дымоудаления</p>
+									</span>
+									<span class="service_item__question">?</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_02.png" alt="alt"></span>
+									<span class="service_item__text">
+										Остекление фасадов
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_03.png" alt="alt"></span>
+									<span class="service_item__text">
+										Тех. обслуживание коммерческих площадей
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_04.png" alt="alt"></span>
+									<span class="service_item__text">
+										Окна из металлопластика, дерева, алюминия 
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_05.png" alt="alt"></span>
+									<span class="service_item__text">
+										Гидроизоляция
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_06.png" alt="alt"></span>
+									<span class="service_item__text">
+										Входные группы и алюминиевые двери
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_07.png" alt="alt"></span>
+									<span class="service_item__text">
+										Остекление лифтовых шахт
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_08.png" alt="alt"></span>
+									<span class="service_item__text">
+										Конструкции из закалённого стекла
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_09.png" alt="alt"></span>
+									<span class="service_item__text">
+										Перегородки
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_10.png" alt="alt"></span>
+									<span class="service_item__text">
+										Ограждения
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_11.png" alt="alt"></span>
+									<span class="service_item__text">
+										Обслуживание автоматики
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_12.png" alt="alt"></span>
+									<span class="service_item__text">
+										Защитные системы:  роллеты, рольставни и ворота
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_13.png" alt="alt"></span>
+									<span class="service_item__text">
+										Высотные работы
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_14.png" alt="alt"></span>
+									<span class="service_item__text">
+										Аренда и продажа спецтехники
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_15.png" alt="alt"></span>
+									<span class="service_item__text">
+										Остекление коттеджей и фахверковых домов
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_16.png" alt="alt"></span>
+									<span class="service_item__text">
+										Ремонтно-строительные работы
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+							<div class="service_item">
+								<a href="#" class="service_item__link">
+									<span class="service_item__img"><img src="img/services_icon_17.png" alt="alt"></span>
+									<span class="service_item__text">
+										Зимние сады
+									</span>
+									<span class="service_item__question">?</span>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="sect-form">
+					<div class="container">
+						<div class="sect_form_inner">
+							<div class="sect_form_info">
+								<div class="sect_form_info__title">Появились вопросы?</div>
+								<div class="sect_form_info__desc">Вы можете заказать бесплатную консультацию технического специалиста</div>
+							</div>
+							<div class="sect_form_content">
+								<form class="form sect-form__form">
+									<h3 class="h3">Заполните форму, чтобы заказать звонок</h3>
+									<div class="wrap-inpute">
+										<div class="wrap-inpute__item">
+											<input type="text" name="Имя" placeholder="Имя">
+										</div>
+										<div class="wrap-inpute__item">
+											<input class="input-phone" type="tel" name="Телефон" placeholder="Контактный телефон">
+										</div>
+										<div class="wrap-inpute__item">
+											<input class="input-phone" type="text" name="Телефон" placeholder="Комментарий">
+										</div>
+									</div>
+									<div class="text-center">
+										<div class="input-cheked">
+											<input id="check2" type="checkbox" name="check" value="check2" checked="checked">
+											<label class="input-cheked__label" for="check2"><span class="input-cheked__text">Я даю согласие на обработку персональных данных и подтверждаю, что ознакомлен с <a href="">Политикой обработки персональных данных</a>.</span></label>
+										</div>		
+										<button class="btn btn--yellow">Заказать звонок</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sect-states sect">
+					<div class="container">
+						<h2 class="h2 sect_h2">Статьи</h2>	
+						<div class="states_list">
+
+
+							<div class="state_item">
+								<a href="#" class="state_item__link">
+									<span class="state_item__img"><img src="img/state.jpg" alt="alt"></span>
+									<span class="state_item__title">Выбор подрядчика по замене фасадного остекления на тёплое в новостройке или ложная экономия</span>
+									<span class="state_item__desc">Что может быть приятнее, чем сэкономить, но высокотехнологичный ремонт, в частности, утепление фасадного остекления — это область, которая не терпит экономии...</span>
+								</a>
+							</div>
+							<div class="state_item">
+								<a href="#" class="state_item__link">
+									<span class="state_item__img"><img src="img/state.jpg" alt="alt"></span>
+									<span class="state_item__title">Выбор подрядчика по замене фасадного остекления на тёплое в новостройке или ложная экономия</span>
+									<span class="state_item__desc">Что может быть приятнее, чем сэкономить, но высокотехнологичный ремонт, в частности, утепление фасадного остекления — это область, которая не терпит экономии...</span>
+								</a>
+							</div>
+							<div class="state_item">
+								<a href="#" class="state_item__link">
+									<span class="state_item__img"><img src="img/state.jpg" alt="alt"></span>
+									<span class="state_item__title">Выбор подрядчика по замене фасадного остекления на тёплое в новостройке или ложная экономия</span>
+									<span class="state_item__desc">Что может быть приятнее, чем сэкономить, но высокотехнологичный ремонт, в частности, утепление фасадного остекления — это область, которая не терпит экономии...</span>
+								</a>
+							</div>
+							<div class="state_item">
+								<a href="#" class="state_item__link">
+									<span class="state_item__img"><img src="img/state.jpg" alt="alt"></span>
+									<span class="state_item__title">Выбор подрядчика по замене фасадного остекления на тёплое в новостройке или ложная экономия</span>
+									<span class="state_item__desc">Что может быть приятнее, чем сэкономить, но высокотехнологичный ремонт, в частности, утепление фасадного остекления — это область, которая не терпит экономии...</span>
+								</a>
+							</div>
+							<div class="state_item">
+								<a href="#" class="state_item__link">
+									<span class="state_item__img"><img src="img/state.jpg" alt="alt"></span>
+									<span class="state_item__title">Выбор подрядчика по замене фасадного остекления на тёплое в новостройке или ложная экономия</span>
+									<span class="state_item__desc">Что может быть приятнее, чем сэкономить, но высокотехнологичный ремонт, в частности, утепление фасадного остекления — это область, которая не терпит экономии...</span>
+								</a>
+							</div>
+
+							<div class="states_all">
+								<a href="#" class="states_all__link">
+									<div class="states_all__text">Открыть все статьи</div>
+									<div class="states_all__img"><img src="img/arrow_long.svg" alt="alt"></div>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="sect_advans">
+					<div class="container">
+						<div class="advans_inner">
+
+							<div class="advans_header">
+								<div class="advans_info">
+									<div class="advans_info__title"><h2 class="h2">Почему Летний сад?</h2></div>
+									<div class="advans_info__desc"><a href="#">Подробнее о нас</a></div>
+								</div>
+								<div class="numbers_block">
+									<div class="num_item">
+										<div class="num_item__number"><span class="num_item_anim" data-max="20">0</span>+</div>
+										<div class="num_item__desc">Лет опыта</div>
+									</div>
+									<div class="num_item">
+										<div class="num_item__number"><span class="num_item_anim" data-max="100">0</span>+</div>
+										<div class="num_item__desc">Специалистов</div>
+									</div>
+									<div class="num_item">
+										<div class="num_item__number"><span class="num_item_anim" data-max="75000">0</span>+</div>
+										<div class="num_item__desc">Реализованых объектов различной сложности</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="partners">
+						<div class="gutters gutters_left"></div>
+						<div class="partners_content">
+							<div class="partners_logo">
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_01.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_02.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_03.jpg" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_04.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_05.jpg" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_06.jpg" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_07.jpg" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_08.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_09.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_10.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_11.png" alt="alt"></a></div>
+								<div class="partner_item"><a href="#"><img src="img/parnter_logo_12.png" alt="alt"></a></div>
+								<a data-fancybox data-src="#modal_logos" href="javascript:;" class="partners_logo__link">Развернуть список</a>
+							</div>
+							<div class="pratners_text">
+								<div class="pratners_text__title"><h2 class="h2">Партнеры</h2></div>
+								<div class="pratners_text__desc">Надёжные партнёрские связи с крупными строительными и эксплуатационными компаниями.</div>
+							</div>
+						</div>
+						<div class="gutters gutters_right"></div>
+					</div>
+				</div>
+
+				<div class="sect_licences">
+					<div class="container">
+						<div class="licences_inner">
+							<div class="licences__title"><h2 class="h2">Допуски</h2></div>
+							<div class="licences__desc">Наши компетенции подтверждаются членством в проектном и строительном СРО, наличием лицензии МЧС, а также работой по международному стандарту ISO 9001.</div>
+						</div>
+						<div class="licences_slider">
+							<div class="licences_slide">
+								<a href="img/allowance.jpg" data-fancybox="first_gallery">
+									<img src="img/allowance.jpg" alt="alt">
+								</a>
+							</div>
+							<div class="licences_slide">
+								<a href="img/allowance.jpg" data-fancybox="first_gallery">
+									<img src="img/allowance.jpg" alt="alt">
+								</a>
+							</div>
+							<div class="licences_slide">
+								<a href="img/allowance.jpg" data-fancybox="first_gallery">
+									<img src="img/allowance.jpg" alt="alt">
+								</a>
+							</div>
+							<div class="licences_slide">
+								<a href="img/allowance.jpg" data-fancybox="first_gallery">
+									<img src="img/allowance.jpg" alt="alt">
+								</a>
+							</div>
+						</div>
+						<div class="licences_nav">
+							<div class="licences_nav__prev"><img src="img/arrow-prev.svg" alt="alt"></div>
+							<div class="licences_nav__next"><img src="img/arrow-next.svg" alt="alt"></div>
+						</div>
+					</div>
+				</div>
+			
+
+			<div class="sect_guarantees sect">
+				<div class="container">
+					<h2 class="h2 sect_h2">Гарантии</h2>	
+					<div class="guarantees_list">
+						<div class="guarantees_item">
+							<img src="img/guarantee_icon_01.svg" alt="alt" class="guarantees_item__img">
+							<div class="guarantees_item__text">Гарантия до 10 лет</div>
+						</div>
+						<div class="guarantees_item">
+							<img src="img/guarantee_icon_02.svg" alt="alt" class="guarantees_item__img">
+							<div class="guarantees_item__text">Работаем строго по договору</div>
+						</div>
+						<div class="guarantees_item">
+							<img src="img/guarantee_icon_03.svg" alt="alt" class="guarantees_item__img">
+							<div class="guarantees_item__text">Собственный сервисный отдел</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer_inner">
+						<div class="footer_projects">
+							<div class="footer_title">Наши проекты</div>
+							<div class="footer_list">
+								<div class="footer_logo">
+									<a href="#" target="_blank"><img src="img/logo_project_01.svg" alt="alt"></a>
+								</div>
+								<div class="footer_logo">
+									<a href="#" target="_blank"><img src="img/logo_project_02.svg" alt="alt"></a>
+								</div>
+								<div class="footer_logo">
+									<a href="#" target="_blank"><img src="img/logo_project_03.svg" alt="alt"></a>
+								</div>
+								<div class="footer_logo">
+									<a href="#" target="_blank"><img src="img/logo_project_04.svg" alt="alt"></a>
+								</div>
+								<div class="footer_logo">
+									<a href="#" target="_blank"><img src="img/logo_project_05.svg" alt="alt"></a>
+								</div>
+								<div class="footer_logo">
+									<a href="#" target="_blank"><img src="img/logo_project_06.svg" alt="alt"></a>
+								</div>
+							</div>
+						</div>
+						<div class="foooter_social">
+							<div class="footer_title">Контакты</div>
+							<div class="social_list">
+								<a href="https://vk.com/lscompany" target="_blank">
+									<img src="img/vk.svg" alt="alt">
+								</a>
+								<a href="https://www.facebook.com/letsad.spb" target="_blank">
+									<img src="img/facebook.svg" alt="alt">
+								</a>
+								<a href="https://www.instagram.com/letsad.fasadka/" target="_blank">
+									<img src="img/instagram.svg" alt="alt">
+								</a>
+								<a href="https://www.youtube.com/channel/UCz4Ah8YDJD7NhoE3KMt8XFg" target="_blank">
+									<img src="img/youtube.svg" alt="alt">
+								</a>    
+							</div>
+							<a data-fancybox data-src="#modal_form" class="btn foooter_social__btn" href="javascript:;">
+								Cвязаться с нами
+							</a>
+						</div>
+						<div class="footer_metirica">
+							<img src="img/counter.png" alt="alt">
+						</div>
+					</div>
+					<div class="copy">Copyright © ООО «Летний Сад», 1999-2020, Все права защищены</div>
+				</div>
+
+			</footer>
+
 		</div>
 
-	</div>
-	
-	<link rel="stylesheet" href="css/styles.min.css">	
-	<script src="js/scripts.min.js"></script>
+		<div class="hidden">
 
-</body>
-</html>
+			<div id="modal_form">
+				<form class="form form_modal">
+					<h3 class="h3">Заполните форму, чтобы заказать звонок</h3>
+					<div class="wrap-inpute">
+						<div class="wrap-inpute__item">
+							<input type="text" name="Имя" placeholder="Имя">
+						</div>
+						<div class="wrap-inpute__item">
+							<input class="input-phone" type="tel" name="Телефон" placeholder="Контактный телефон">
+						</div>
+						<div class="wrap-inpute__item">
+							<input class="input-phone" type="text" name="Телефон" placeholder="Комментарий">
+						</div>
+					</div>
+					<div class="text-center">
+						<div class="input-cheked">
+							<input id="check2" type="checkbox" name="check" value="check2" checked="checked">
+							<label class="input-cheked__label" for="check2"><span class="input-cheked__text">Я даю согласие на обработку персональных данных и подтверждаю, что ознакомлен с <a href="">Политикой обработки персональных данных</a>.</span></label>
+						</div>		
+						<button class="btn btn--yellow">Отправить</button>
+					</div>
+				</form>			
+			</div>
+
+			<div id="modal_logos">
+				<div class="modal_logos_wrap">
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_01.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_02.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_03.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_04.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_05.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_06.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_07.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_08.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_09.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_10.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_11.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_12.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_01.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_02.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_03.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_04.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_05.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_06.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_07.jpg" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_08.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_09.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_10.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_11.png" alt="alt"></a></div>
+					<div class="partner_item"><a href="#"><img src="img/parnter_logo_12.png" alt="alt"></a></div>
+				</div>		
+			</div>
+
+		</div>
+
+
+
+		<div id="topNubex"><img src="img/arrow-up.svg" /></div>
+
+		<link rel="stylesheet" href="css/jquery.fancybox.css">
+		<link rel="stylesheet" href="css/styles.min.css">	
+		<script src="js/scripts.min.js"></script>
+
+	</body>
+	</html>
