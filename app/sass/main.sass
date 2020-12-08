@@ -59,6 +59,7 @@ h2, .h2
 	font-size: 32px
 	font-weight: 300
 	text-transform: uppercase
+	color: $blueDark
 	+media-breakpoint-down(sm)
 		font-size: 20px
 
@@ -101,7 +102,15 @@ h2, .h2
 		&:hover
 			background: darken($yellow, 15%)
 			color: #000
+	&--blue
+		color: #fff
+		background: $accent
+		&:hover
+			background: darken($accent, 10%)
 	
+.text-center
+	text-align: center
+
 // Custom Sass / Remove before use
 .container
 	max-width: 1180px
@@ -135,6 +144,8 @@ h2, .h2
 		justify-content: space-between
 
 .header__menu
+	position: relative
+	z-index: 2
 	margin-left: auto
 	margin-right: 60px
 	+media-breakpoint-down(sm)
@@ -210,6 +221,8 @@ h2, .h2
 	height: 35px
 	margin-left: 40px
 	&--active
+		position: relative
+		z-index: 4
 		.search_form__input
 			width: 100%
 			border: 1px solid #fff
@@ -314,6 +327,8 @@ h2, .h2
 	font-weight: 400
 
 .header_contacts
+	background: #FFFFFF
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.13)
 	+media-breakpoint-down(sm)
 		display: none
 .location
@@ -649,6 +664,10 @@ h2, .h2
 		opacity: 0
 	&:nth-child(6n)
 		margin-right: 0
+		.service_item__wrap
+			left: -185px
+		.service_item__wrap::after
+			left: 236px
 		+media-breakpoint-down(lg)
 			margin-right: 10px
 		+media-breakpoint-down(sm)
@@ -673,6 +692,8 @@ h2, .h2
 		&:hover
 			text-decoration: none
 			color: $accent
+			.service_item__wrap
+				opacity: 1
 	&__img
 		width: 88px
 		height: 84px
@@ -701,6 +722,34 @@ h2, .h2
 		color: $gray
 		border: 1px solid $gray
 		border-radius: 100%
+	&__wrap
+		position: absolute
+		top: -100px
+		left: 0
+		width: 370px
+		line-height: 21px
+		padding: 9px 25px 9px 17px
+		color: #fff
+		background: $blueLight
+		transition: all .3s ease
+		opacity: 0
+		+media-breakpoint-down(lg)
+			display: none
+		&:after
+			content: ''
+			position: absolute
+			top: 80px
+			left: 110px	
+			width: 20px
+			height: 20px
+			border: 15px solid transparent
+			border-top: 15px solid $blueLight
+	&__note
+		display: block
+		height: 62px
+		overflow: hidden
+
+
 
 
 .sect-form
@@ -986,6 +1035,7 @@ button.mfp-close
 		.h2
 			font-size: 32px
 			line-height: 42px
+			color: #fff
 			+media-breakpoint-down(sm)
 				font-size: 20px
 				line-height: 24px
@@ -1057,6 +1107,7 @@ button.mfp-close
 			height: auto
 
 #modal_logos
+	max-width: 1180px
 	margin: 0 20px
 .modal_logos_wrap
 	display: flex
@@ -1157,6 +1208,7 @@ button.mfp-close
 		bottom: 170px
 		left: 60px
 		cursor: pointer
+		z-index: 100000
 		+media-breakpoint-down(xs)
 			bottom: 146px
 			left: 15px
@@ -1172,6 +1224,7 @@ button.mfp-close
 		bottom: 170px
 		right: 60px
 		cursor: pointer
+		z-index: 100000
 		+media-breakpoint-down(xs)
 			bottom: 146px
 			right: 15px
@@ -1184,7 +1237,7 @@ button.mfp-close
 			opacity: .7
 .licences_slider
 	max-width: 800px
-	margin: 60px auto 0 auto
+	margin: 0 auto 0 auto
 	+media-breakpoint-down(md)
 		max-width: 530px
 .sect_licences .slick-slide
@@ -1192,6 +1245,51 @@ button.mfp-close
 		+media-breakpoint-down(sm)
 			max-width: 210px
 			height: auto
+.licences_slide			
+	padding-top: 200px
+	position: relative
+	+media-breakpoint-down(sm)
+		padding-top: 148px
+	a
+		&:hover
+			.licences_slide__note
+				opacity: 1
+	&__note
+		position: absolute
+		top: 100px
+		left: 0
+		width: 300px
+		line-height: 17px
+		padding: 9px 25px 9px 17px
+		height: 80px
+		color: #fff
+		background: $blueLight
+		opacity: 0
+		transition: all .3s ease
+		&:after
+			content: ''
+			position: absolute
+			top: 80px
+			left: 60px
+			width: 20px
+			height: 20px
+			border: 15px solid transparent
+			border-top: 15px solid $blueLight
+	&__text
+		display: block
+		overflow: hidden
+		height: 65px
+
+.licences_inner
+	position: absolute
+	top: 0
+	left: 0
+	+media-breakpoint-down(lg)
+		padding-left: 10px
+
+.slick-slide:focus
+	outline: none
+
 
 //Guarantees
 .guarantees_list
@@ -1451,7 +1549,7 @@ body.compensate-for-scrollbar
 		height: 45px
 		margin-left: -15px
 .promo_text_slider
-	max-width: 288px
+	max-width: 300px
 	margin: 30px 0 0 30px
 	+media-breakpoint-down(sm)
 		max-width: 175px
@@ -1459,7 +1557,10 @@ body.compensate-for-scrollbar
 .promo_text_slide
 	font-size: 20px
 	line-height: 24px
+	height: 48px
+	overflow: hidden
 	+media-breakpoint-down(sm)
+		height: 30px
 		font-size: 12px
 		line-height: 14px
 	a
@@ -1543,7 +1644,9 @@ body.compensate-for-scrollbar
 		&:nth-child(2n)
 			margin-right: 0
 	&__link
-		display: block
+		display: flex
+		justify-content: center
+		align-items: center
 		height: 100%
 		color: #fff
 		&:hover
@@ -1580,14 +1683,848 @@ body.compensate-for-scrollbar
 		justify-content: center
 		align-items: center
 		flex-direction: column
-		text-align: center
-		height: 100%
+		height: 200px
+		overflow: hidden
+		padding: 0 15px
 		font-size: 22px
 		line-height: 26px
+		text-align: center
 		text-transform: uppercase
 		z-index: 100
 		+media-breakpoint-down(sm)
+			height: 110px
 			font-size: 12px
 			line-height: 16px
 		p
 			margin: 0
+
+// About
+
+.promo_about
+	display: flex
+	position: relative
+	min-height: 600px
+	background: linear-gradient(120.41deg, #192D6E 5.31%, #4D63AA 64.48%) 
+	background-size: 100%
+	+media-breakpoint-down(lg)
+		min-height: 780px
+	+media-breakpoint-down(sm)
+		flex-direction: column-reverse
+		justify-content: flex-end
+		min-height: auto
+		padding-bottom: 190px
+	&__bg
+		position: absolute
+		top: 0
+		right: 0
+		width: 55%
+		height: 100%
+		+media-breakpoint-down(lg)
+			height: 485px
+		+media-breakpoint-down(sm)
+			position: absolute
+			width: 210px
+			height: 245px
+			margin-left: auto
+			top: auto
+			bottom: -20px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__info
+		width: 100%
+	&__h1
+		margin: 124px 0 52px	
+		max-width: 360px
+		+media-breakpoint-down(lg)
+			margin: 65px 0 52px	
+		+media-breakpoint-down(sm)
+			margin: 40px 0 24px
+			max-width: 100%
+	&__desc
+		max-width: 360px
+		color: #fff
+		+media-breakpoint-down(lg)
+			max-width: 320px
+		+media-breakpoint-down(sm)
+			max-width: 100%
+	.container
+		position: relative
+		width: 100%
+
+.about_numbers
+	position: absolute
+	bottom: 27px
+	right: 15px
+	z-index: 100
+	height: 200px
+	padding: 28px 30px
+	background: #fff
+	color: $accent
+	+media-breakpoint-down(lg)
+		bottom: 125px
+		right: 55px
+	+media-breakpoint-down(sm)
+		max-width: 400px	
+		height: 102px
+		position: static
+		margin-top: 30px
+		padding: 12px 14px
+	&__title
+		max-width: 335px
+		margin: 0 0 15px 0
+		font-size: 20px
+		line-height: 23px
+		color: $blueDark
+		+media-breakpoint-down(sm)
+			margin: 0 0 8px 0
+			font-size: 11px
+			line-height: 14px
+	.num_item__number
+		color: $accent
+		+media-breakpoint-down(sm)
+			font-size: 22px
+			line-height: 24px
+	.num_item__desc
+		color: $accent
+		+media-breakpoint-down(sm)
+			font-size: 8px
+			line-height: 12px
+	.num_item
+		+media-breakpoint-down(sm)
+			width: 30%
+			margin: 0
+		&:last-child
+			+media-breakpoint-down(sm)
+				width: 40%
+
+
+//sect_certificate
+.sect_certificate
+	margin-bottom: 130px
+	&__h2
+		margin: 70px 0 100px 0
+		+media-breakpoint-down(md)
+			font-size: 28px
+
+.certif_inner
+	display: flex
+	justify-content: space-between
+	+media-breakpoint-down(sm)
+		flex-direction: column
+
+.certif_inner
+	&__title
+		margin-top: 100px
+		font-family: "RobotoSlab", sans-serif
+		font-weight: 200
+		font-size: 32px
+		line-height: 42px
+		text-transform: uppercase
+		color: $blueDark
+		+media-breakpoint-down(md)
+			margin: 0 0 20px 0	
+		+media-breakpoint-down(sm)
+			font-size: 20px
+	&__desc
+		max-width: 238px
+		margin-top: 30px
+		+media-breakpoint-down(sm)
+			display: none
+		&--mobile
+			display: none
+			+media-breakpoint-down(sm)
+				display: block
+	&__image
+		position: relative
+		margin-right: 40px
+		+media-breakpoint-down(md)
+			max-width: 380px
+		&:after
+			content: ''
+			position: absolute
+			top: 25px
+			right: -25px
+			width: 100%
+			height: 100%
+			border: 1px solid rgba(169, 169, 169, 0.77)
+			+media-breakpoint-down(lg)
+				top: 13px
+				right: -18px
+		img
+			position: relative
+			z-index: 10
+			filter: drop-shadow(38.6792px 38.6792px 77.3585px rgba(77, 99, 170, 0.15))
+			+media-breakpoint-down(lg)
+				width: 100%
+				height: auto
+
+
+.sect_technologies
+	height: 360px
+	background: $accent
+	+media-breakpoint-down(lg)
+		height: 210px
+	+media-breakpoint-down(md)
+		height: 195px
+.techno_inner
+	position: relative
+	display: flex
+	justify-content: space-between
+.techno_images
+	position: relative
+	+media-breakpoint-down(md)
+		display: none
+	&:after
+		content: ''
+		position: absolute
+		top: 10px
+		left: 315px
+		z-index: 1
+		width: 336px
+		height: 336px
+		border: 1px solid $grayDark
+		border-radius: 100%
+		+media-breakpoint-down(lg)
+			width: 188px
+			height: 188px
+			top: 14px
+			left: 180px
+	&__large
+		position: relative
+		top: -35px
+		left: 0
+		z-index: 2
+		width: 423px
+		height: 423px
+		filter: drop-shadow(0px 0px 60.8536px #4D63AA)
+		+media-breakpoint-down(lg)
+			top: -13px
+			width: 238px
+			height: 238px
+		img
+			border-radius: 100%
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transform: scale(-1, 1)
+	&__small
+		position: absolute
+		top: 28px
+		left: 333px
+		z-index: 3
+		width: 300px
+		height: 300px
+		+media-breakpoint-down(lg)
+			width: 166px
+			height: 166px
+			top: 25px
+			left: 190px
+		img
+			border-radius: 100%
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transform: scale(-1, 1)
+
+.techno_info
+	margin-right: 140px
+	max-width: 340px
+	+media-breakpoint-down(md)
+		margin-right: 0
+	.techno_title
+		h2
+			margin-top: 90px
+			color: #fff
+			+media-breakpoint-down(lg)
+				margin-top: 10px
+			+media-breakpoint-down(md)
+				margin-top: 20px
+				font-size: 20px
+				line-height: 26px
+	.techno_desc
+		margin-top: 30px
+		color: #fff
+
+
+.sect_patent
+	margin-top: 90px
+	padding-bottom: 90px
+	+media-breakpoint-down(lg)
+		padding-bottom: 0
+	+media-breakpoint-down(md)
+		margin-top: 24px
+	.container
+		position: relative
+
+.patent_inner
+	display: flex
+	flex-direction: row-reverse
+	justify-content: space-between
+	+media-breakpoint-down(sm)
+		flex-direction: column
+
+.patent_title
+	max-width: 500px
+	margin-bottom: 20px
+	text-align: left
+	+media-breakpoint-down(sm)
+		display: none
+	&__mobile
+		display: none
+		+media-breakpoint-down(sm)
+			display: block
+
+.patent_info
+	margin-top: 50px
+	max-width: 500px
+	text-align: justify
+	+media-breakpoint-down(lg)
+		max-width: 354px
+	+media-breakpoint-down(md)
+		max-width: 300px
+		margin-top: 0
+	+media-breakpoint-down(sm)
+		max-width: 100%
+		margin-top: 120px
+		padding-bottom: 60px
+	&__list
+		margin: 0
+		padding-left: 13px
+
+
+.patent_images
+	position: relative
+	&__img
+		position: relative
+		width: 407px
+		height: 448px
+		+media-breakpoint-down(lg)
+			width: 270px
+			height: 300px
+		+media-breakpoint-down(sm)
+			width: 200px
+			height: 220px
+			margin-left: auto
+		&:before
+			content: ''
+			position: absolute
+			top: 34px
+			right: 34px
+			width: 100%
+			height: 100%
+			border: 1px solid $grayDark
+			z-index: 2
+			+media-breakpoint-down(lg)
+				top: 20px
+				right: 30px
+			+media-breakpoint-down(sm)
+				top: 20px
+				right: 18px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transform: scale(-1, 1)
+	&__patent
+		position: absolute
+		left: -151px
+		top: 230px
+		width: 248px
+		height: auto
+		z-index: 10
+		+media-breakpoint-down(lg)
+			width: 165px
+			height: 250px
+			left: -78px
+			top: 150px
+		+media-breakpoint-down(sm)
+			width: 120px
+			height: 184px
+			left: auto
+			top: 110px
+			right: 145px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.patent_btn
+	margin-top: 80px
+	+media-breakpoint-down(lg)
+		display: flex
+	+media-breakpoint-down(xs)
+		margin-top: 50px
+		justify-content: space-between
+	.btn
+		width: 112px
+		height: 47px
+		margin-right: 70px
+		+media-breakpoint-down(xs)
+			margin-right: 0
+
+.sect_patent_reverse
+	.patent_info
+	.patent_title
+		width: 100%
+		left: auto
+		right: 15px
+	.patent_inner
+		flex-direction: row
+		+media-breakpoint-down(sm)
+			flex-direction: column
+	.patent_images__img::before
+		right: -34px
+		+media-breakpoint-down(lg)
+			right: -25px
+		+media-breakpoint-down(sm)
+			right: 22px
+	.patent_images__img img
+		transform: scale(1, 1)
+	.patent_images__patent
+		left: auto
+		right: -151px
+		+media-breakpoint-down(sm)
+			right: 144px
+
+.sect_licences_about
+	margin-top: 90px
+
+.special_inner
+	position: relative
+	display: flex
+	margin-top: 120px
+	+media-breakpoint-down(lg)
+		flex-direction: column-reverse
+		margin-top: 0
+
+.special_slider
+	max-width: 715px
+	+media-breakpoint-down(lg)
+		min-width: 100%
+.special_images
+	display: flex
+	&__img
+		width: 420px
+		height: 370px
+		position: relative
+		+media-breakpoint-down(lg)
+			width: 100%
+			height: 400px
+		+media-breakpoint-down(sm)
+			height: 280px
+		&:before
+			content: ''
+			position: absolute
+			top: 33px
+			right: -100px
+			z-index: -1
+			width: 100%
+			height: 100%
+			border: 1px solid $grayDark
+			+media-breakpoint-down(lg)
+				display: none
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__imgsm
+		position: relative
+		width: 317px
+		height: 423px
+		margin: 70px 0 0 -20px
+		z-index: 10
+		+media-breakpoint-down(lg)
+			display: none
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.special_info
+	margin: 100px 0 0 60px
+	max-width: 340px
+	+media-breakpoint-down(lg)
+		margin: 100px 0 0 0
+		padding: 0 15px
+
+.specia_desc
+	+media-breakpoint-down(lg)
+		margin-bottom: 20px
+
+.special_nav
+	display: flex
+	margin: 45px 0
+	+media-breakpoint-down(lg)
+		position: absolute
+		top: 340px
+		left: 0
+		justify-content: space-between
+		width: 100%
+		svg
+			fill: #fff
+	+media-breakpoint-down(sm)
+		top: 266px
+	&__dark
+		+media-breakpoint-down(lg)
+			display: none
+	&__white
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+	&__right
+		margin-left: 45px
+		transform: scale(-1, 1)
+		cursor: pointer
+		+media-breakpoint-down(lg)
+			margin-right: 15px
+		&:hover
+			img
+				opacity: 1
+		img
+			opacity: 0.8
+			transition: all .3s ease
+	&__left
+		cursor: pointer
+		+media-breakpoint-down(lg)
+			margin-left: 15px
+		&:hover
+			img
+				opacity: 1
+		img
+			opacity: 0.8
+			transition: all .3s ease
+
+
+.sect_special
+	+media-breakpoint-down(md)
+		padding-bottom: 100px
+	.container
+		+media-breakpoint-down(lg)
+				padding: 0
+
+.special_slider 
+	position: relative
+	.slick-dots
+		margin: 40px auto 0 auto
+		padding: 0
+.slick-dots
+	display: flex
+	li
+		position: relative
+		width: 10px
+		height: 10px
+		background: $grayDark
+		margin-right: 37px
+		list-style-type: none
+		cursor: pointer
+		&:last-child
+			margin-right: 0
+	.slick-active
+		position: relative
+		background: $accent
+		&:after
+			content: ''
+			position: absolute
+			top: -7px
+			left: -7px
+			width: 26px
+			height: 26px
+			border: 1px solid $accent
+	button
+		display: none
+
+//Sect thanks
+.sect_thanks
+	background: linear-gradient(113.3deg, #4D63AA 0%, #192D6E 100%)
+	padding-top: 160px
+	+media-breakpoint-down(lg)
+		padding-top: 70px
+	+media-breakpoint-down(md)
+		padding-top: 40px
+	.container
+		position: relative
+
+.thanks
+	&__info	
+		max-width: 400px
+		+media-breakpoint-down(lg)
+			max-width: 100%
+			width: 100%
+	&__title
+		h2
+			color: #fff
+	&__desc
+		max-width: 260px
+		margin-top: 20px
+		color: #fff
+.thanks_wrap
+	display: flex
+	justify-content: space-between
+	+media-breakpoint-down(md)
+		flex-direction: column
+		justify-content: center
+		align-items: center
+.thanks_inner
+	position: relative
+	max-width: 450px
+	margin-right: 190px
+	+media-breakpoint-down(lg)
+		max-width: 354px
+		margin-right: 90px
+	+media-breakpoint-down(md)
+		max-width: 210px
+		margin: 50px 0 0 0
+.thanks_slide
+	max-width: 450px
+	+media-breakpoint-down(lg)
+		max-width: 354px
+	img
+		width: 100%
+		height: auto
+
+.thanks_nav__left
+	position: absolute
+	top: 260px
+	left: -50px
+	cursor: pointer
+	+media-breakpoint-down(lg)
+		top: 220px
+	+media-breakpoint-down(md)
+		top: 118px
+	&:hover
+		img
+			opacity: 1
+	img
+		width: 24px
+		opacity: 0.7
+		transition: all .3s ease
+.thanks_nav__right
+	position: absolute
+	top: 260px
+	right: -50px
+	cursor: pointer
+	+media-breakpoint-down(lg)
+		top: 220px
+	+media-breakpoint-down(md)
+		top: 118px
+	&:hover
+		img
+			opacity: 1
+	img
+		width: 24px
+		transform: scale(-1, 1)
+		opacity: 0.7
+		transition: all .3s ease
+
+.thanks_count
+	display: flex
+	justify-content: flex-end
+	font-size: 20px
+	color: #fff
+	transform: translateY(20px)
+	+media-breakpoint-down(md)
+		display: none
+
+.thanks_text_slider
+	position: absolute
+	bottom: 30px
+	left: 0
+	max-width: 383px
+	line-height: 21px
+	padding: 9px 25px 9px 17px
+	height: 80px
+	color: #fff
+	background: $blueLight
+	&:after
+		content: ''
+		position: absolute
+		top: 24px
+		right: -30px
+		width: 20px
+		height: 20px
+		border: 15px solid transparent
+		border-left: 15px solid $blueLight
+
+.thanks_text_slider
+	transition: all .3s ease
+	opacity: 0
+	&--show
+		opacity: 1
+.thanks_text_slide
+		height: 60px
+		overflow: hidden
+		opacity: auto
+
+// Partners about
+.set_partners
+	margin-top: 170px
+	+media-breakpoint-down(lg)
+		margin-top: 100px
+	.pratners_text
+		margin: 0 0 0 130px
+		+media-breakpoint-down(lg)
+			margin: 0 0 40px 0
+		&__title
+			h2
+				color: $blueDark
+		&__desc
+			color: $accent
+	.partners_logo
+		padding: 0
+		border: none
+	.partners_logo__link
+		left: 0
+		bottom: -10px
+	.partner_item a
+		justify-content: flex-start
+
+
+
+.project_inner
+	position: relative
+	display: flex
+	flex-direction: row-reverse
+	margin-top: 120px
+	+media-breakpoint-down(lg)
+		flex-direction: column-reverse
+		margin-top: 20px
+
+.sect_project
+	.container
+		+media-breakpoint-down(lg)
+			padding: 0
+
+.project_slider
+	max-width: 715px
+	+media-breakpoint-down(lg)
+		min-width: 100%
+.project_images
+	display: flex
+	&__img
+		width: 420px
+		height: 370px
+		position: relative
+		margin-left: -40px
+		+media-breakpoint-down(lg)
+			width: 100%
+			height: 400px
+			margin-left: 0
+		+media-breakpoint-down(sm)
+			height: 280px
+		&:before
+			content: ''
+			position: absolute
+			top: 33px
+			right: 100px
+			z-index: -1
+			width: 100%
+			height: 100%
+			border: 1px solid $grayDark
+			+media-breakpoint-down(md)
+				display: none
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__imgsm
+		position: relative
+		width: 317px
+		height: 423px
+		margin: 70px 0 0 0px
+		z-index: 10
+		+media-breakpoint-down(lg)
+			display: none
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.project_info
+	margin: 100px auto 0 0
+	max-width: 340px
+	+media-breakpoint-down(lg)
+		margin: 0
+		padding: 0 15px
+	&__btn
+		width: 112px
+		height: 47px
+		margin-top: 60px
+		+media-breakpoint-down(lg)
+			margin: 15px 0 35px 0
+
+.project_nav
+	display: flex
+	margin: 45px 0
+	+media-breakpoint-down(lg)
+		position: absolute
+		top: 420px
+		left: 0
+		justify-content: space-between
+		width: 100%
+	+media-breakpoint-down(sm)
+		top: 338px
+	&--dark
+		+media-breakpoint-down(lg)
+			display: none
+	&--white
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+	&__right
+		margin-left: 45px
+		transform: scale(-1, 1)
+		cursor: pointer
+		+media-breakpoint-down(lg)
+			margin-right: 15px
+		&:hover
+			img
+				opacity: 1
+		img
+			opacity: 0.8
+			transition: all .3s ease
+	&__left
+		cursor: pointer
+		+media-breakpoint-down(lg)
+			margin-left: 15px
+		&:hover
+			img
+				opacity: 1
+		img
+			opacity: 0.8
+			transition: all .3s ease
+
+
+.project_slider 
+	.slick-dots
+		padding: 0
+		margin: 40px auto 0 auto
+.slick-dots
+	display: flex
+	justify-content: center
+	li
+		position: relative
+		width: 10px
+		height: 10px
+		background: $grayDark
+		margin-right: 37px
+		list-style-type: none
+		cursor: pointer
+		&:last-child
+			margin-right: 0
+	.slick-active
+		position: relative
+		background: $accent
+		&:after
+			content: ''
+			position: absolute
+			top: -7px
+			left: -7px
+			width: 26px
+			height: 26px
+			border: 1px solid $accent
+	button
+		display: none
+
+
